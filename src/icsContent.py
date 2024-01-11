@@ -31,7 +31,7 @@ def getics(festival_lst, year):
 
 
 def main():
-    year = 2023
+    year = 2024
     festival_lst1 = govContent(year)
     getics(festival_lst1, year)
 
