@@ -2,6 +2,7 @@
 venv
 /login.png
 .idea/*
+src/.idea/*
 **/__pycache__
 !.idea/runConfigurations
 .vscode
