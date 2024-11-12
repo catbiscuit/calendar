@@ -17,11 +17,16 @@ def baiduContent(year):
         domain = "https://sp1.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?tn=wisetpl&format=json&resource_id=39043&query="
         url = domain + str(year) + "年" + month + "月&t=" + str(ts)
 
+        url = "https://opendata.baidu.com/data/inner?tn=reserved_all_res_tn&type=json&resource_id=52109&query=" + str(
+            year) + "年" + month + "月" + "&apiType=yearMonthData"
+
+        print(url)
+
         response = requests.get(url)
         content = response.text
 
         root = json.loads(content)
-        almanac = root["data"][0]["almanac"]
+        almanac = root["Result"][0]["DisplayData"]["resultData"]["tplData"]["data"]["almanac"]
         for item in almanac:
             if ('status' in item and item["status"] == '1'):
                 current_date = convert_to_date(item["year"] + "年" + item["month"] + "月" + item["day"] + "日", year)

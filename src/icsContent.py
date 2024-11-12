@@ -31,12 +31,12 @@ def getics(festival_lst, year):
 
 
 def main():
-    year = 2024
-    festival_lst1 = govContent(year)
-    getics(festival_lst1, year)
+    year = 2025
+    # festival_lst1 = govContent(year)
+    # getics(festival_lst1, year)
 
-    # festival_lst2 = baiduContent(year)
-    # getics(festival_lst2, year)
+    festival_lst2 = baiduContent(year)
+    getics(festival_lst2, year)
 
 
 if __name__ == '__main__':
